@@ -37,3 +37,20 @@ As mentioned in the materials `Data/prices.csv` has an extra blank line. The res
 ```python
 types = [str, float, lambda d: tuple(d.split('/')), str, float, float, float, float, int]
 ```
+
+## Chapter 3 - Program Organization
+
+## Chapter 4 - Classes and Objects
+
+## Chapter 5 - Inner Workings of Python Objects
+
+## Chapter 6 - Generators
+
+## Chapter 7 - Advanced Topics
+
+## Chapter 8 - Testing and Debugging
+
+## Cpater 9 - Packages
+
+### 9.3 Distribution
+Needs Bloomberg specific material
