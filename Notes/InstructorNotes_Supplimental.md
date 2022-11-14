@@ -23,3 +23,17 @@ for maxbytes example, the `[`, `]` are not valid syntax. better to show
 # Read only up to 'maxbytes' bytes
 data = f.read(maxbytes)
 ```
+
+## Chapter 2 - Working with Data
+
+### 2.2 Containers
+#### Dict Construction
+As mentioned in the materials `Data/prices.csv` has an extra blank line. The result is that the example raises an `IndexError`. To get the following examples to work, need to use the static `prices` dict from earlier in the materials.
+### 2.7 Objects
+#### Type Checking
+'Caution' at the end is meant to be in **bold**
+#### Exercises
+- _2.26: The Big Picture_ (Bonus) - I am guessing there is a way to do this without resorting to a lambda, but this get the job done
+```python
+types = [str, float, lambda d: tuple(d.split('/')), str, float, float, float, float, int]
+```

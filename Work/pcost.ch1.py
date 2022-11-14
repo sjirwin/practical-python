@@ -1,22 +1,21 @@
 # pcost.py
 #
 # Exercise 1.27
-import csv
 import sys
 
 def portfolio_cost(filename):
     total_cost = 0.0
     with open(filename, 'rt') as f:
-        rows = csv.reader(f)
-        headers = next(rows)
-        for row_num, row in enumerate(rows, start=1):
-            record = dict(zip(headers, row))
+        header = next(f).strip().split(',')
+        for raw_line in f:
+            line = raw_line.strip()
+            _, num_shares_str, price_str = line.split(',')
             try:
-                num_shares = int(record['shares'])
-                price = float(record['price'])
+                num_shares = int(num_shares_str)
+                price = float(price_str)
                 total_cost += (num_shares * price)
             except ValueError:
-                print(f'Row {row_num}: Bad row: {row}')
+                print(f'Unable to parse line {line}')
     return total_cost
 
 if len(sys.argv) == 2:
